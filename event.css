@@ -1,0 +1,44 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+div {
+  height: 60vh;
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  text-align: center;
+  background-color: rgb(77, 199, 255);
+}
+
+table {
+  width: 100%;
+  margin-bottom: 15px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+button {
+  margin-top: 20px;
+  color: black;
+  /* background-color: #fff; */
+  border: 2px solid red;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: red;
+}
+
+input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  border: 1px solid red;
+}

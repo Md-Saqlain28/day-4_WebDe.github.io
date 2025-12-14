@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* ensure widths/heights include padding and borders */
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        /* background image moved to <img> instead of body so we can use object-fit */
+        font-family: Arial, sans-serif;
+        background-color: burlywood;
+      }
+      .bg-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: fill;
+        object-position: center;
+        z-index: -1;
+        pointer-events: none;
+      }
+      div.overview {
+        background-image: url("sunset.jpeg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        object-fit: contain; /* for img elements, safe fallback */
+        overflow: hidden; /* prevent children from being drawn outside */
+        /* background-color: #fff; */
+        /* backdrop-filter: blur(10px); */
+        border: 2px solid white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 350px;
+        height: 524px;
+        position: relative;
+        gap: 20px;
+        font-size: 24px;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 5px;
+      }
+      a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      h1 {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 0;
+      }
+      .head {
+        margin-bottom: 100px;
+        width: 100%;
+      }
+      /* ensure link list scrolls inside the overview if long */
+      .overview img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .content {
+        max-height: calc(100% - 80px); /* account for header and padding */
+        overflow-y: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      class="bg-image"
+      src="pexels-photo-279010.jpeg"
+      alt="Desk with plants"
+    />
+    <div class="overview">
+      <div class="head">
+        <h1>My Projects</h1>
+      </div>
+      <div class="content">
+        <a href="event.html">Event Registration card</a>
+        <a href="bird.html">Floppy Bird</a>
+        <a href="boot.html">Bootstrap</a>
+        <a href="jquery.html">JQUERY</a>
+        <a href="task.html">To-do Manager</a>
+      </div>
+    </div>
+  </body>
+</html>
